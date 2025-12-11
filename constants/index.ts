@@ -1,21 +1,78 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import {
-  RxDiscordLogo,
   RxGithubLogo,
   RxInstagramLogo,
-  RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";
 
+// Services DevCenturionAi
 export const SKILL_DATA = [
   {
-    skill_name: "HTML",
+    skill_name: "Sites Web",
     image: "html.png",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "CSS",
+    skill_name: "React/Next.js",
+    image: "react.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Chatbots IA",
+    image: "ts.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Automatisation",
+    image: "node.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Dashboards",
+    image: "tailwind.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "APIs",
+    image: "graphql.png",
+    width: 80,
+    height: 80,
+  },
+] as const;
+
+export const SOCIALS = [
+  {
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    link: "https://wa.me/33658687475",
+  },
+  {
+    name: "Instagram",
+    icon: RxInstagramLogo,
+    link: "https://instagram.com/devcenturionai",
+  },
+  {
+    name: "LinkedIn",
+    icon: RxLinkedinLogo,
+    link: "https://linkedin.com/company/devcenturionai",
+  },
+] as const;
+
+// Technologies Frontend
+export const FRONTEND_SKILL = [
+  {
+    skill_name: "HTML5",
+    image: "html.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "CSS3",
     image: "css.png",
     width: 80,
     height: 80,
@@ -39,26 +96,14 @@ export const SKILL_DATA = [
     height: 80,
   },
   {
-    skill_name: "Redux",
-    image: "redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    image: "reactquery.png",
+    skill_name: "Next.js 14",
+    image: "next.png",
     width: 80,
     height: 80,
   },
   {
     skill_name: "TypeScript",
     image: "ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
     width: 80,
     height: 80,
   },
@@ -68,107 +113,9 @@ export const SKILL_DATA = [
     width: 80,
     height: 80,
   },
-  {
-    skill_name: "Stripe",
-    image: "stripe.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Node.js",
-    image: "node.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
-  },
 ] as const;
 
-export const SOCIALS = [
-  {
-    name: "Instagram",
-    icon: RxInstagramLogo,
-    link: "https://instagram.com",
-  },
-  {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
-  },
-  {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://twitter.com",
-  },
-] as const;
-
-export const FRONTEND_SKILL = [
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Material UI",
-    image: "mui.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    image: "react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    image: "redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "TypeScript",
-    image: "ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
-    width: 80,
-    height: 80,
-  },
-] as const;
-
+// Technologies Backend & IA
 export const BACKEND_SKILL = [
   {
     skill_name: "Node.js",
@@ -177,10 +124,16 @@ export const BACKEND_SKILL = [
     height: 80,
   },
   {
-    skill_name: "Express.js",
-    image: "express.png",
+    skill_name: "Python",
+    image: "python.png",
     width: 80,
     height: 80,
+  },
+  {
+    skill_name: "PostgreSQL",
+    image: "postgresql.png",
+    width: 70,
+    height: 70,
   },
   {
     skill_name: "MongoDB",
@@ -195,51 +148,27 @@ export const BACKEND_SKILL = [
     height: 55,
   },
   {
-    skill_name: "PostgreSQL",
-    image: "postgresql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "MySQL",
-    image: "mysql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Prisma",
-    image: "prisma.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Graphql",
+    skill_name: "GraphQL",
     image: "graphql.png",
     width: 80,
     height: 80,
   },
 ] as const;
 
+// Outils & DevOps
 export const FULLSTACK_SKILL = [
-  {
-    skill_name: "React Native",
-    image: "reactnative.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Tauri",
-    image: "tauri.png",
-    width: 70,
-    height: 70,
-  },
   {
     skill_name: "Docker",
     image: "docker.png",
     width: 70,
     height: 70,
   },
-
+  {
+    skill_name: "Stripe",
+    image: "stripe.png",
+    width: 80,
+    height: 80,
+  },
   {
     skill_name: "Figma",
     image: "figma.png",
@@ -250,95 +179,96 @@ export const FULLSTACK_SKILL = [
 
 export const OTHER_SKILL = [
   {
-    skill_name: "Go",
-    image: "go.png",
+    skill_name: "OpenAI",
+    image: "openai.png",
     width: 60,
     height: 60,
   },
 ] as const;
 
+// Projets / Démos
 export const PROJECTS = [
   {
-    title: "Modern Next.js 14 Portfolio",
+    title: "Sites Web Sur Mesure",
     description:
-      'Embark on a journey through my professional evolution with the "Modern Next.js Portfolio" - a dynamic showcase of my skills, experiences, and passion for web development. Crafted with precision and powered by Next.js, this portfolio is more than just a static display; it\'s an immersive experience that reflects the cutting edge of modern web technologies.',
+      "Sites vitrines et e-commerce modernes, responsives et optimisés SEO. Design premium avec animations fluides, intégration de paiements Stripe et formulaires de contact. Performance maximale pour convertir vos visiteurs en clients.",
     image: "/projects/project-1.png",
-    link: "https://example.com",
+    link: "https://meziane1502-sys.github.io/portfolio-demos/",
   },
   {
-    title: "Interactive Cards Portfolio",
+    title: "Chatbots IA Intelligents",
     description:
-      'Step into the extraordinary world of my professional journey through the "Interactive Cards Portfolio" - an innovative and visually captivating platform that redefines the traditional portfolio experience. Ditching the conventional static layout, this portfolio leverages interactive cards to showcase my skills, projects, and personality in an engaging and dynamic manner.',
+      "Assistants virtuels propulsés par l'IA pour automatiser votre service client 24/7. Réponses instantanées, qualification de leads et intégration WhatsApp. Boostez votre productivité tout en offrant une expérience client exceptionnelle.",
     image: "/projects/project-2.png",
-    link: "https://example.com",
+    link: "https://meziane1502-sys.github.io/portfolio-demos/",
   },
   {
-    title: "Space Themed Website",
+    title: "Dashboards Analytics",
     description:
-      'Embark on an interstellar journey with my "Space Themed Website", a mesmerizing space-themed website that invites you to explore the cosmic wonders beyond our world. Immerse yourself in an awe-inspiring digital experience that blends cutting-edge design with the mysteries of the universe.',
+      "Tableaux de bord temps réel pour visualiser vos KPIs. Graphiques interactifs, rapports automatisés et alertes personnalisées. Prenez des décisions data-driven avec une vue complète sur votre activité.",
     image: "/projects/project-3.png",
-    link: "https://example.com",
+    link: "https://meziane1502-sys.github.io/portfolio-demos/",
   },
 ] as const;
 
 export const FOOTER_DATA = [
   {
-    title: "Community",
+    title: "Services",
     data: [
       {
-        name: "YouTube",
-        icon: FaYoutube,
-        link: "https://youtube.com",
+        name: "Sites Web",
+        icon: null,
+        link: "#projects",
+      },
+      {
+        name: "Chatbots IA",
+        icon: null,
+        link: "#projects",
+      },
+      {
+        name: "Dashboards",
+        icon: null,
+        link: "#projects",
+      },
+    ],
+  },
+  {
+    title: "Contact",
+    data: [
+      {
+        name: "WhatsApp",
+        icon: FaWhatsapp,
+        link: "https://wa.me/33658687475",
+      },
+      {
+        name: "LinkedIn",
+        icon: RxLinkedinLogo,
+        link: "https://linkedin.com/company/devcenturionai",
       },
       {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "https://github.com",
-      },
-      {
-        name: "Discord",
-        icon: RxDiscordLogo,
-        link: "https://discord.com",
+        link: "https://github.com/meziane1502-sys",
       },
     ],
   },
   {
-    title: "Social Media",
+    title: "Légal",
     data: [
       {
-        name: "Instagram",
-        icon: RxInstagramLogo,
-        link: "https://instagram.com",
-      },
-      {
-        name: "Twitter",
-        icon: RxTwitterLogo,
-        link: "https://twitter.com",
-      },
-      {
-        name: "Linkedin",
-        icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
-      },
-    ],
-  },
-  {
-    title: "About",
-    data: [
-      {
-        name: "Become Sponsor",
+        name: "Mentions légales",
         icon: null,
-        link: "https://youtube.com",
+        link: "/mentions-legales",
       },
       {
-        name: "Learning about me",
+        name: "CGV",
         icon: null,
-        link: "https://example.com",
+        link: "/cgv",
       },
       {
-        name: "Contact Me",
+        name: "Confidentialité",
         icon: null,
-        link: "mailto:contact@example.com",
+        link: "/confidentialite",
       },
     ],
   },
@@ -346,19 +276,59 @@ export const FOOTER_DATA = [
 
 export const NAV_LINKS = [
   {
-    title: "About me",
-    link: "#about-me",
-  },
-  {
-    title: "Skills",
+    title: "Services",
     link: "#skills",
   },
   {
-    title: "Projects",
+    title: "Projets",
     link: "#projects",
+  },
+  {
+    title: "Tarifs",
+    link: "#pricing",
   },
 ] as const;
 
 export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio",
+  sourceCode: "https://github.com/meziane1502-sys",
 };
+
+// Tarifs
+export const PRICING = [
+  {
+    title: "Starter",
+    price: "490",
+    popular: false,
+    features: [
+      "Site vitrine one-page",
+      "Design responsive",
+      "Formulaire de contact",
+      "Hébergement 1 an",
+      "Support email",
+    ],
+  },
+  {
+    title: "Business",
+    price: "890",
+    popular: true,
+    features: [
+      "Site multi-pages",
+      "Chatbot IA intégré",
+      "Analytics dashboard",
+      "SEO optimisé",
+      "Support prioritaire",
+    ],
+  },
+  {
+    title: "Enterprise",
+    price: "Sur devis",
+    popular: false,
+    features: [
+      "Solution sur mesure",
+      "IA personnalisée",
+      "Automatisations",
+      "API dédiées",
+      "Support 24/7",
+    ],
+  },
+] as const;
