@@ -69,9 +69,6 @@ export const Pricing = () => {
                 {plan.price === "Sur devis" ? "" : "€"}
                 {plan.price}
               </span>
-              {plan.price !== "Sur devis" && (
-                <span className="text-gray-400 ml-2">HT</span>
-              )}
             </div>
 
             {/* Features */}

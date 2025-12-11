@@ -234,7 +234,7 @@ export const QuoteCalculator = () => {
                         {total}€
                       </span>
                     </div>
-                    <p className="text-gray-500 text-sm mt-1">{t.pricing.perProject}</p>
+                    {t.pricing.perProject && <p className="text-gray-500 text-sm mt-1">{t.pricing.perProject}</p>}
                   </div>
 
                   <a

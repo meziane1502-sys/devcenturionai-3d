@@ -53,7 +53,7 @@ export const translations = {
       popular: "Populaire",
       cta: "Démarrer",
       ctaContact: "Nous contacter",
-      perProject: "HT",
+      perProject: "",
     },
     // Calculator
     calculator: {
@@ -144,7 +144,7 @@ export const translations = {
       popular: "Popular",
       cta: "Get Started",
       ctaContact: "Contact us",
-      perProject: "excl. tax",
+      perProject: "",
     },
     // Calculator
     calculator: {
@@ -235,7 +235,7 @@ export const translations = {
       popular: "الأكثر شعبية",
       cta: "ابدأ الآن",
       ctaContact: "اتصل بنا",
-      perProject: "بدون ضريبة",
+      perProject: "",
     },
     // Calculator
     calculator: {
