@@ -1,6 +1,11 @@
+"use client";
+
 import { FOOTER_DATA } from "@/constants";
+import { useI18n } from "@/lib/i18n/context";
 
 export const Footer = () => {
+  const { t } = useI18n();
+
   return (
     <div className="w-full h-full bg-[#09090b] text-gray-200 shadow-lg p-[15px] border-t border-[#f9731620]">
       <div className="w-full flex flex-col items-center justify-center m-auto">
@@ -37,7 +42,7 @@ export const Footer = () => {
         </div>
 
         <div className="mb-[20px] text-[15px] text-center text-gray-400">
-          &copy; DevCenturionAi {new Date().getFullYear()}. Tous droits réservés.
+          &copy; DevCenturionAi {new Date().getFullYear()}. {t.footer.rights}
         </div>
       </div>
     </div>

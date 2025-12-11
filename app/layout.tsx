@@ -5,6 +5,9 @@ import type { PropsWithChildren } from "react";
 import { Footer } from "@/components/main/footer";
 import { Navbar } from "@/components/main/navbar";
 import { StarsCanvas } from "@/components/main/star-background";
+import { CustomCursor } from "@/components/ui/custom-cursor";
+import { Chatbot } from "@/components/main/chatbot";
+import { I18nProvider } from "@/lib/i18n/context";
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
 
@@ -27,10 +30,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
           inter.className
         )}
       >
-        <StarsCanvas />
-        <Navbar />
-        {children}
-        <Footer />
+        <I18nProvider>
+          <CustomCursor />
+          <StarsCanvas />
+          <Navbar />
+          {children}
+          <Chatbot />
+          <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

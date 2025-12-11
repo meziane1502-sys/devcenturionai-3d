@@ -119,3 +119,45 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Custom animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.6), 0 0 60px rgba(168, 85, 247, 0.3);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}

@@ -3,6 +3,7 @@
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
+import { useI18n } from "@/lib/i18n/context";
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -10,6 +11,8 @@ import {
 } from "@/lib/motion";
 
 export const SkillText = () => {
+  const { t } = useI18n();
+
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center">
       <motion.div
@@ -18,7 +21,7 @@ export const SkillText = () => {
       >
         <SparklesIcon className="text-[#f97316] mr-[10px] h-5 w-5" />
         <h1 className="Welcome-text text-[13px]">
-          Technologies de pointe
+          {t.skills.badge}
         </h1>
       </motion.div>
 
@@ -26,14 +29,14 @@ export const SkillText = () => {
         variants={slideInFromLeft(0.5)}
         className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
       >
-        Solutions digitales propulsées par l&apos;IA
+        {t.skills.title}
       </motion.div>
 
       <motion.div
         variants={slideInFromRight(0.5)}
         className="cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center"
       >
-        Sites web, chatbots, automatisation et dashboards sur mesure.
+        {t.skills.description}
       </motion.div>
     </div>
   );
