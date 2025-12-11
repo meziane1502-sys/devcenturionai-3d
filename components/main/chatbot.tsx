@@ -22,7 +22,7 @@ const getAIResponse = (message: string): string => {
   const lowerMessage = message.toLowerCase();
 
   if (lowerMessage.includes("tarif") || lowerMessage.includes("prix") || lowerMessage.includes("coût")) {
-    return "Nos tarifs démarrent à 490€ HT pour un site vitrine. Nous proposons 3 formules : Starter (490€), Business (890€) et Enterprise (sur devis). Chaque projet est unique, je vous invite à utiliser notre calculateur de devis ou à nous contacter pour une estimation personnalisée !";
+    return "Nos tarifs démarrent à 490€ pour un site vitrine. Nous proposons 3 formules : Starter (490€), Business (890€) et Enterprise (sur devis). Chaque projet est unique, je vous invite à utiliser notre calculateur de devis ou à nous contacter pour une estimation personnalisée !";
   }
 
   if (lowerMessage.includes("délai") || lowerMessage.includes("temps") || lowerMessage.includes("durée")) {

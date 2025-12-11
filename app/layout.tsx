@@ -23,7 +23,7 @@ export const metadata: Metadata = siteConfig;
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="fr">
+    <html lang="fr" translate="no">
       <body
         className={cn(
           "bg-[#09090b] overflow-y-scroll overflow-x-hidden",

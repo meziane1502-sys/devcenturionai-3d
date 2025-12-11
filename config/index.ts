@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 
 export const siteConfig: Metadata = {
   title: "DevCenturionAi | Solutions Digitales Premium",
+  other: {
+    "google": "notranslate",
+  },
   description: "Sites web sur mesure, chatbots IA, automatisation et dashboards. Transformez votre business avec l'intelligence artificielle.",
   keywords: [
     "devcenturionai",

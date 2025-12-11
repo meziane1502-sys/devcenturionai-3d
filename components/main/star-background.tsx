@@ -2,8 +2,41 @@
 
 import { PointMaterial } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useState, useRef, Suspense, useEffect } from "react";
+import { useState, useRef, Suspense, useEffect, Component, ReactNode } from "react";
 import * as THREE from "three";
+
+// Error Boundary for Three.js
+class ThreeErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div className="w-full h-full bg-[#09090b]" />;
+    }
+    return this.props.children;
+  }
+}
+
+// Check WebGL support
+const isWebGLSupported = (): boolean => {
+  if (typeof window === "undefined") return false;
+  try {
+    const canvas = document.createElement("canvas");
+    return !!(
+      window.WebGLRenderingContext &&
+      (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
+    );
+  } catch {
+    return false;
+  }
+};
 
 // Generate sphere positions without NaN values
 const generateSpherePositions = (count: number, radius: number): Float32Array => {
@@ -183,13 +216,43 @@ const StarBackground = () => {
   );
 };
 
-export const StarsCanvas = () => (
-  <div className="w-full h-auto fixed inset-0 -z-10">
-    <Canvas camera={{ position: [0, 0, 1] }}>
-      <Suspense fallback={null}>
-        <Nebula />
-        <StarBackground />
-      </Suspense>
-    </Canvas>
-  </div>
-);
+export const StarsCanvas = () => {
+  const [canRender, setCanRender] = useState(false);
+  const [contextLost, setContextLost] = useState(false);
+
+  useEffect(() => {
+    setCanRender(isWebGLSupported());
+  }, []);
+
+  // Handle WebGL context loss
+  const handleContextLost = () => {
+    setContextLost(true);
+  };
+
+  if (!canRender || contextLost) {
+    return <div className="w-full h-auto fixed inset-0 -z-10 bg-[#09090b]" />;
+  }
+
+  return (
+    <div className="w-full h-auto fixed inset-0 -z-10">
+      <ThreeErrorBoundary>
+        <Canvas
+          camera={{ position: [0, 0, 1] }}
+          onCreated={({ gl }) => {
+            gl.domElement.addEventListener("webglcontextlost", handleContextLost);
+          }}
+          gl={{
+            antialias: false,
+            powerPreference: "low-power",
+            failIfMajorPerformanceCaveat: true
+          }}
+        >
+          <Suspense fallback={null}>
+            <Nebula />
+            <StarBackground />
+          </Suspense>
+        </Canvas>
+      </ThreeErrorBoundary>
+    </div>
+  );
+};
