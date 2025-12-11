@@ -5,7 +5,6 @@ import { Skills } from "@/components/main/skills";
 import { Pricing } from "@/components/main/pricing";
 import { Timeline } from "@/components/main/timeline";
 import { QuoteCalculator } from "@/components/main/quote-calculator";
-import { Testimonials } from "@/components/main/testimonials";
 import { FAQ } from "@/components/main/faq";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
         <Timeline />
         <Encryption />
         <Projects />
-        <Testimonials />
         <Pricing />
         <QuoteCalculator />
         <FAQ />
