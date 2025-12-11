@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { FOOTER_DATA } from "@/constants";
 
 export const Footer = () => {
@@ -20,45 +18,18 @@ export const Footer = () => {
               <h3 className="font-bold text-[16px] text-[#f97316]">{column.title}</h3>
               {column.data.map(({ icon: Icon, name, link }) => {
                 const isExternal = link.startsWith("http");
-                const isAnchor = link.startsWith("#");
-
-                if (isExternal) {
-                  return (
-                    <a
-                      key={`${column.title}-${name}`}
-                      href={link}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="flex flex-row items-center my-[15px] hover:text-[#f97316] transition-colors"
-                    >
-                      {Icon && <Icon className="text-[#a855f7]" />}
-                      <span className="text-[15px] ml-[6px]">{name}</span>
-                    </a>
-                  );
-                }
-
-                if (isAnchor) {
-                  return (
-                    <a
-                      key={`${column.title}-${name}`}
-                      href={link}
-                      className="flex flex-row items-center my-[15px] hover:text-[#f97316] transition-colors"
-                    >
-                      {Icon && <Icon className="text-[#a855f7]" />}
-                      <span className="text-[15px] ml-[6px]">{name}</span>
-                    </a>
-                  );
-                }
 
                 return (
-                  <Link
+                  <a
                     key={`${column.title}-${name}`}
                     href={link}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noreferrer noopener" : undefined}
                     className="flex flex-row items-center my-[15px] hover:text-[#f97316] transition-colors"
                   >
                     {Icon && <Icon className="text-[#a855f7]" />}
                     <span className="text-[15px] ml-[6px]">{name}</span>
-                  </Link>
+                  </a>
                 );
               })}
             </div>

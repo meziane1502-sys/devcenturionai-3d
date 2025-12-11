@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SparklesIcon, CheckIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
 
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/lib/motion";
 import { PRICING } from "@/constants";
@@ -86,9 +85,10 @@ export const Pricing = () => {
             </ul>
 
             {/* CTA Button */}
-            <Link
-              href="https://wa.me/33658687475?text=Bonjour,%20je%20suis%20intéressé%20par%20l'offre%20"
+            <a
+              href={`https://wa.me/33658687475?text=Bonjour,%20je%20suis%20intéressé%20par%20l'offre%20${plan.title}`}
               target="_blank"
+              rel="noreferrer noopener"
               className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                 plan.popular
                   ? "bg-gradient-to-r from-orange-500 to-violet-500 text-white hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
@@ -96,7 +96,7 @@ export const Pricing = () => {
               }`}
             >
               {plan.price === "Sur devis" ? "Nous contacter" : "Démarrer"}
-            </Link>
+            </a>
           </motion.div>
         ))}
       </div>

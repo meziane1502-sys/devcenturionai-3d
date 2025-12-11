@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { BASE_PATH } from "@/constants";
 
@@ -17,7 +16,7 @@ export const ProjectCard = ({
   link,
 }: ProjectCardProps) => {
   return (
-    <Link
+    <a
       href={link}
       target="_blank"
       rel="noreferrer noopener"
@@ -35,6 +34,6 @@ export const ProjectCard = ({
         <h1 className="text-2xl font-semibold text-white group-hover:text-[#f97316] transition-colors">{title}</h1>
         <p className="mt-2 text-gray-300">{description}</p>
       </div>
-    </Link>
+    </a>
   );
 };
