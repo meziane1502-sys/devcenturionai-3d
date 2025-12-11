@@ -5,6 +5,9 @@ import {
   RxLinkedinLogo,
 } from "react-icons/rx";
 
+// Base path for GitHub Pages deployment
+export const BASE_PATH = "/devcenturionai-3d";
+
 // Services DevCenturionAi
 export const SKILL_DATA = [
   {
@@ -258,17 +261,17 @@ export const FOOTER_DATA = [
       {
         name: "Mentions légales",
         icon: null,
-        link: "/mentions-legales",
+        link: "https://meziane1502-sys.github.io/portfolio-demos/mentions-legales.html",
       },
       {
         name: "CGV",
         icon: null,
-        link: "/cgv",
+        link: "https://meziane1502-sys.github.io/portfolio-demos/cgv.html",
       },
       {
         name: "Confidentialité",
         icon: null,
-        link: "/confidentialite",
+        link: "https://meziane1502-sys.github.io/portfolio-demos/politique-confidentialite.html",
       },
     ],
   },

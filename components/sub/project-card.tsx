@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { BASE_PATH } from "@/constants";
+
 type ProjectCardProps = {
   src: string;
   title: string;
@@ -22,7 +24,7 @@ export const ProjectCard = ({
       className="relative overflow-hidden rounded-lg shadow-lg border border-[#f9731630] hover:border-[#f97316] transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] group"
     >
       <Image
-        src={src}
+        src={`${BASE_PATH}${src}`}
         alt={title}
         width={1000}
         height={1000}

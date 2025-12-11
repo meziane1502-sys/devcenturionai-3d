@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { BASE_PATH } from "@/constants";
 import { slideInFromTop } from "@/lib/motion";
 
 export const Encryption = () => {
@@ -24,14 +25,14 @@ export const Encryption = () => {
       <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
         <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
           <Image
-            src="/lock-top.png"
+            src={`${BASE_PATH}/lock-top.png`}
             alt="Lock top"
             width={50}
             height={50}
             className="translate-y-5 transition-all duration-200 group-hover:translate-y-11"
           />
           <Image
-            src="/lock-main.png"
+            src={`${BASE_PATH}/lock-main.png`}
             alt="Lock main"
             width={70}
             height={70}
@@ -59,7 +60,7 @@ export const Encryption = () => {
           preload="false"
           className="w-full h-auto"
         >
-          <source src="/videos/encryption-bg.webm" type="video/webm" />
+          <source src={`${BASE_PATH}/videos/encryption-bg.webm`} type="video/webm" />
         </video>
       </div>
     </div>

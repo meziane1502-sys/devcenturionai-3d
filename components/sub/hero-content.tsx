@@ -4,6 +4,7 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { BASE_PATH } from "@/constants";
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -64,7 +65,7 @@ export const HeroContent = () => {
         className="w-full h-full flex justify-center items-center"
       >
         <Image
-          src="/hero-bg.svg"
+          src={`${BASE_PATH}/hero-bg.svg`}
           alt="DevCenturionAi"
           height={650}
           width={650}

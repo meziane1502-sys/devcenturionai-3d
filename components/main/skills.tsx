@@ -3,6 +3,7 @@ import { SkillText } from "@/components/sub/skill-text";
 
 import {
   BACKEND_SKILL,
+  BASE_PATH,
   FRONTEND_SKILL,
   FULLSTACK_SKILL,
   OTHER_SKILL,
@@ -90,7 +91,7 @@ export const Skills = () => {
             muted
             autoPlay
           >
-            <source src="/videos/skills-bg.webm" type="video/webm" />
+            <source src={`${BASE_PATH}/videos/skills-bg.webm`} type="video/webm" />
           </video>
         </div>
       </div>
